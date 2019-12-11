@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule }          from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -12,8 +12,6 @@ import { QuienComponent } from './components/quien/quien.component';
 import { IprofeComponent } from './components/iprofe/iprofe.component';
 import { IalumnoComponent } from './components/ialumno/ialumno.component';
 import { ProfesorComponent } from './components/profesor/profesor.component';
-
-
 
 const appRoutes: Routes = [
   { path: 'loginAlumno', component: LoginComponent },
