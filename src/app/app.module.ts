@@ -18,7 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
   { path: 'loginAlumno', component: LoginComponent },
-  { path: 'loginProfesor', component: LoginPComponent },
+  { path: 'loginprofesor', component: LoginPComponent },
   { path: 'home', component: QuienComponent},
   { path: 'NotasAlumno', component: NotasComponent },
   { path: 'comentarios', component: CajaComponent},
