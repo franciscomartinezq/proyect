@@ -12,6 +12,7 @@ import { QuienComponent } from './components/quien/quien.component';
 import { IprofeComponent } from './components/iprofe/iprofe.component';
 import { IalumnoComponent } from './components/ialumno/ialumno.component';
 import { ProfesorComponent } from './components/profesor/profesor.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   { path: 'Ialumno', component: IalumnoComponent},
   { path: 'profesor', component: ProfesorComponent},
   { path: 'notas', component: NotasComponent},
+  { path: 'home', component: HomeComponent},
   {
     path: 'login',
     component: LoginComponent,
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     QuienComponent,
     IprofeComponent,
     IalumnoComponent,
-    ProfesorComponent
+    ProfesorComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
