@@ -10,8 +10,7 @@ export class LoginComponent implements OnInit {
   constructor() { }
   ngOnInit() {
   }
-  
-  enviar(values){
+enviar(values){
     alert("Alumno creado con éxito")
     console.log(values)
   }
