@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-ialumno',
@@ -6,13 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./ialumno.component.css']
    
 })
-export class IalumnoComponent {
+export class IalumnoComponent  {
 
-  constructor() { }
+  signupForm: FormGroup
+    
+  constructor(
+    private _builder: FormBuilder
+  ){
+    this.signupForm=this._builder.group({
+      nombres:['', Validators.required] ,
+      apellidos: ['', Validators.required], 
+      email: ['', Validators.compose([Validators.email, Validators.required])] ,
+      rut: ['', Validators.required],
+      clave: ['', Validators.required] ,
 
-  ngOnInit() {
+    })
   }
-  
-  
 
+  enviar(values){
+    alert("Alumno creado con éxito")
+  }
+
+  
+  
 }

@@ -1,15 +1,16 @@
 <h1 id="name-form">Inscripción alumno</h1>
 
 <div id="div1">
-    <div id="div2">
-        <input placeholder="Nombres" type="text" id="input1"/>
-        <input placeholder="Apellidos" type="text" class="input2"/>
-        <input placeholder="Email" type="text"/>
-        <input placeholder="Rut" type="text"/>
-        <input placeholder="Contraseña" type="password"/>
+    <form [formGroup]="signupForm" (ngSubmit)="enviar(signupForm.value)" id="div2">
+        <input formControlName="nombres" placeholder="Nombres" type="text" id="input1"/>
+        <input formControlName="apellidos"placeholder="Apellidos" type="text" class="input2"/>
+        <input formControlName="email" placeholder="Email" type="text"/>
+        <div *ngIf="signupForm.get('email').hasError('email') && signupForm.get('email').touched ">Email obligatorio</div>
+        <input formControlName="rut" placeholder="Rut" type="text"/>
+        <input formControlName="clave" placeholder="Contraseña" type="password"/>
         <input placeholder="Repita contraseña" type="password"/>
-        <button (click)="onSave()">Save</button>
-    </div>
+        <button (click)="enviar(values)" [disabled]="signupForm.invalid" type="submit">Crear alumno</button>
+    </form>
 </div>
 
 <nav id="nav2"class="navbar navbar-expand-lg navbar-light bg-light">
